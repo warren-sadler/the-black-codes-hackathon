@@ -1,17 +1,22 @@
 const { Router } = require("express");
-const Project = require("./model");
-const { withControllerUtils } = require("../../utils/controllerUtils");
+const { handleGetProjects } = require("./controllers");
 
-const handleGetProjects = withControllerUtils((controllerUtils) => {
-  return async (req, res) => {
-    try {
-      const projects = await Project.find();
-      controllerUtils.ok(res, projects);
-    } catch (error) {
-      controllerUtils.fail(res, error);
-    }
-  };
-});
+/** .
+ * @swagger
+ * tags:
+ *   name: Projects
+ *   description: Project Management and Retrieval
+ */
+
+/**
+ *
+ * @swagger
+ * path:
+ *   /projects/:
+ *    get:
+ *      summary: Fetch all projects
+ *      tags: [Projects]
+ */
 
 /**
  *

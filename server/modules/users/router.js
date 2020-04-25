@@ -1,6 +1,22 @@
 const { Router } = require("express");
 const User = require("./model");
 const { withControllerUtils } = require("../../utils/controllerUtils");
+/**
+ * @swagger
+ * tags:
+ *   name: Users
+ *   description: User Management and Retrieval
+ */
+
+/**
+ *
+ * @swagger
+ * path:
+ *   /users/:
+ *    get:
+ *      summary: Fetch all users
+ *      tags: [Users]
+ */
 
 const handleGetUsers = withControllerUtils((controllerUtils) => {
   return async (req, res) => {
