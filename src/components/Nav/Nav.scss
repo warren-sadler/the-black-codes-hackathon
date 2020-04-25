@@ -1,0 +1,24 @@
+.nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background: 1px solid red;
+    padding: 30px;
+    position: absolute;
+  }
+  
+  .nav-logo {
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    width: 80px;
+    height: 60px;
+  }
+  
+  .list-item {
+    display: inline-block;
+    margin-right: 20px;
+    color: #999;
+  }
