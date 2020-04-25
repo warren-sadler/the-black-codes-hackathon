@@ -1,0 +1,21 @@
+.Filter {
+  margin: 10px;
+  width: 250px;
+
+    input[type="checkbox"]{
+      margin: 0 9px;
+      background-color: transparent;
+    }
+    ul.filter-list{
+      color: #959595;
+      display: flex;
+      flex-direction: column;
+      text-transform: uppercase;
+    li.list-item{
+      color:white;
+      margin: 5px;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: none;
+    }
+  }
+}
