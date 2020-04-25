@@ -23,11 +23,29 @@ const controllerUtils = {
       error: error.toString(),
     });
   },
+  /**
+   *
+   * @param {import('express').Response} res
+   * @param {Object} entity
+   */
+  created(res, entity) {
+    res.status(201).json({
+      status: 201,
+      message: "created",
+      payload: entity,
+    });
+  },
+  badRequest(res, message = "Invalid request") {
+    res.status(400).json({
+      status: 400,
+      message: message,
+    });
+  },
 };
 
 function withControllerUtils(willReceiveUtils) {
-  return function (req, res) {
-    willReceiveUtils(controllerUtils)(req, res);
+  return function (req, res, next) {
+    willReceiveUtils(controllerUtils)(req, res, next);
   };
 }
 
