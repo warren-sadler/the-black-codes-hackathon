@@ -1,27 +1,17 @@
 const { Router } = require("express");
 const Profile = require("./model");
+const { withControllerUtils } = require("../../utils/controllerUtils");
 
-/**
- *
- * @param {import('express').Request} req
- * @param {import('express').Response} res
- */
-async function handleGetProfiles(req, res) {
-  try {
-    const profiles = await Profile.find();
-    res.status(200).json({
-      status: 200,
-      message: "ok",
-      payload: profiles,
-    });
-  } catch (err) {
-    res.status(500).json({
-      status: 500,
-      message: "Internal Server Error",
-      error: err.toString(),
-    });
-  }
-}
+const handleGetProfiles = withControllerUtils((controllerUtils) => {
+  return async (req, res) => {
+    try {
+      const profiles = await Profile.find();
+      controllerUtils.ok(res, profiles);
+    } catch (error) {
+      controllerUtils.fail(res, error);
+    }
+  };
+});
 
 /**
  *
