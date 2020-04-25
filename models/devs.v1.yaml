@@ -1,0 +1,30 @@
+title: devs
+type: object
+x-examples:
+  Sample Dev:
+    id: 123-456-789
+    firstName: Warren
+    lastName: Sadler
+    programmingLanguages:
+      - JavaScript
+      - Java
+      - Clojure
+    yearsActive: 8
+    profile:
+      bio: I like coding
+description: 'The Black Codes is a community of developers, devs describes a community memeber who is technincal.'
+properties:
+  id:
+    type: string
+  firstName:
+    type: string
+  lastName:
+    type: string
+  yearsActive:
+    type: integer
+  status:
+    type: string
+  programmingLanguages:
+    type: array
+    items:
+      type: string
