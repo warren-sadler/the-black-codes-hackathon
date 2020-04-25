@@ -1,0 +1,58 @@
+{
+  "users":[
+  {
+    "_id": "5ea4686f29cc72f3a89504e3",
+    "name": {
+      "first": "Gonzales",
+      "last": "Mccarty"
+    },
+    "emailAddress": "gonzales.mccarty@undefined.us",
+    "registeredTS": "Tuesday, February 21, 2017 10:29 AM"
+  },
+  {
+    "_id": "5ea4686f4db6cc5839545123",
+    "name": {
+      "first": "Winters",
+      "last": "Martin"
+    },
+    "emailAddress": "winters.martin@undefined.info",
+    "registeredTS": "Tuesday, September 20, 2016 8:37 PM"
+  },
+  {
+    "_id": "5ea4686fa0612596863bee6a",
+    "name": {
+      "first": "Leonard",
+      "last": "Good"
+    },
+    "emailAddress": "leonard.good@undefined.biz",
+    "registeredTS": "Tuesday, October 30, 2018 6:29 AM"
+  },
+  {
+    "_id": "5ea4686fd371a1c7eb5395be",
+    "name": {
+      "first": "Tanner",
+      "last": "Rosario"
+    },
+    "emailAddress": "tanner.rosario@undefined.tv",
+    "registeredTS": "Wednesday, July 18, 2018 11:00 AM"
+  },
+  {
+    "_id": "5ea4686feff2266837b628a6",
+    "name": {
+      "first": "Downs",
+      "last": "Osborn"
+    },
+    "emailAddress": "downs.osborn@undefined.org",
+    "registeredTS": "Friday, September 20, 2019 4:42 AM"
+  },
+  {
+    "_id": "5ea4686fa1a451c910017746",
+    "name": {
+      "first": "Dionne",
+      "last": "Potts"
+    },
+    "emailAddress": "dionne.potts@undefined.me",
+    "registeredTS": "Wednesday, August 10, 2016 8:01 PM"
+  }
+]
+}
