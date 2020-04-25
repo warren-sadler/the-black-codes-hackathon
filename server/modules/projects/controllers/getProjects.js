@@ -1,4 +1,4 @@
-const Project = require("./model");
+const Project = require("../model");
 const { withControllerUtils } = require("../../../utils/controllerUtils");
 
 const handleGetProjects = withControllerUtils((controllerUtils) => {
