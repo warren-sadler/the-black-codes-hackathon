@@ -35,10 +35,26 @@ const controllerUtils = {
       payload: entity,
     });
   },
+  /**
+   *
+   * @param {import('express').Response} res
+   * @param {String} message
+   */
   badRequest(res, message = "Invalid request") {
     res.status(400).json({
       status: 400,
-      message: message,
+      message,
+    });
+  },
+  /**
+   *
+   * @param {import('express').Response} res
+   * @param {String} message
+   */
+  notFound(res, message = "Not Found") {
+    res.status(404).json({
+      status: 404,
+      message,
     });
   },
 };

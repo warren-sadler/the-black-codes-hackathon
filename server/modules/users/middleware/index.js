@@ -1,1 +1,2 @@
-exports.validateCreateBody = require("./validateCreateBody");
+exports.validateCreateRequest = require("./validateCreateRequest");
+exports.validateUpdateRequest = require("./validateUpdateRequest");

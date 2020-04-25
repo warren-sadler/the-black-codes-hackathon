@@ -11,7 +11,7 @@ const validateUserCreateRequest = withControllerUtils((controllerUtils) => {
     if (!req.body.emailAddress) {
       controllerUtils.badRequest(
         res,
-        "emailAddress is required to create a User"
+        "[User Create Error]: 'emailAddress' is required to create a User"
       );
     } else {
       next();
