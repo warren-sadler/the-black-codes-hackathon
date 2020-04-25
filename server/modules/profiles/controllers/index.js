@@ -1,1 +1,1 @@
-exports.handleGetProfiles = require("./getProfiles");
+exports.handleGetProfiles = require("./handleGetProfiles");

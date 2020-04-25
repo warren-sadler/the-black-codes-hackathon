@@ -1,0 +1,1 @@
+exports.validateCreateBody = require("./validateCreateBody");

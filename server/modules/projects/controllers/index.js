@@ -1,1 +1,1 @@
-exports.handleGetProjects = require("./getProjects");
+exports.handleGetProjects = require("./handleGetProjects");
