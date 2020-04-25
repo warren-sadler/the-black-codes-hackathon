@@ -1,17 +1,22 @@
 const { Router } = require("express");
-const Profile = require("./model");
-const { withControllerUtils } = require("../../utils/controllerUtils");
+const { handleGetProfiles } = require("./controllers");
 
-const handleGetProfiles = withControllerUtils((controllerUtils) => {
-  return async (req, res) => {
-    try {
-      const profiles = await Profile.find();
-      controllerUtils.ok(res, profiles);
-    } catch (error) {
-      controllerUtils.fail(res, error);
-    }
-  };
-});
+/** .
+ * @swagger
+ * tags:
+ *   name: Profiles
+ *   description: Profile Management and Retrieval
+ */
+
+/**
+ *
+ * @swagger
+ * path:
+ *   /profiles/:
+ *    get:
+ *      summary: Fetch all profiles
+ *      tags: [Profiles]
+ */
 
 /**
  *

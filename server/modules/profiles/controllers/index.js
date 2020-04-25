@@ -1,0 +1,1 @@
+exports.handleGetProfiles = require("./getProfiles");

@@ -13,6 +13,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4",
     "winston": "^3.2.1"
   },
   "scripts": {
@@ -20,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "nodemon"
+    "server:dev": "nodemon",
+    "server:start": "node ./runScripts/runServer.js"
   },
   "proxy": "http://localhost:8080",
   "eslintConfig": {
