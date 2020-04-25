@@ -13,6 +13,10 @@ const profileSchema = new mongoose.Schema({
   bio: String,
   location: String,
   greeting: String,
+  userID: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
 });
 
 const Profile = new mongoose.model("Profile", profileSchema);
