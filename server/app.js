@@ -17,6 +17,17 @@ function buildApplication() {
   const app = express();
   // Apply Middleware
   app.use(require("morgan")("combined"));
+  app.use(require("helmet")());
+  app.use(require("compression")());
+  app.use(require("cors")());
+  app.use(
+    require("express-rate-limit")({
+      windowMs: 15 * 60 * 1000, // 15 minutes
+      max: 100, // limit each IP to 100 requests per windowMs
+    })
+  );
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: false }));
   app.use("/api-docs", swaggerUI.serve);
   app.get("/api-docs", swaggerUI.setup(swaggerJSDoc(swaggerDefinition), {}));
   // Apply Routers
