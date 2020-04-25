@@ -1,0 +1,7 @@
+{
+  "verbose": true,
+  "ignore": ["*.spec.js"],
+  "execMap": {
+    "js": "node ./scripts/runServer.js"
+  }
+}
