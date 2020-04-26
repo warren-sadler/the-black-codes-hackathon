@@ -1,0 +1,13 @@
+.Header {
+  background: url('/assets/images/broken_noise.png') repeat;
+  display: flex;
+  align-items: flex-end;
+  height: 20vh;
+  padding-bottom: 0.5%;
+  padding-left: 2%;
+
+  h1 {
+    font-size: 4em;
+    text-transform: uppercase;
+  }
+}
