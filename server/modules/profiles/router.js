@@ -1,5 +1,13 @@
 const { Router } = require("express");
-const { handleGetProfiles } = require("./controllers");
+const {
+  validateCreateRequest,
+  validateUpdateRequest,
+} = require("./middleware");
+const {
+  handleGetProfiles,
+  handlePostProfiles,
+  handlePutProfiles,
+} = require("./controllers");
 
 /** .
  * @swagger
@@ -25,6 +33,8 @@ const { handleGetProfiles } = require("./controllers");
 function mountProfilesRouter(app) {
   const profilesRouter = new Router();
   profilesRouter.get("/", handleGetProfiles);
+  profilesRouter.post("/", validateCreateRequest, handlePostProfiles);
+  profilesRouter.put("/:id", validateUpdateRequest, handlePutProfiles);
   app.use("/api/v1/profiles", profilesRouter);
 }
 

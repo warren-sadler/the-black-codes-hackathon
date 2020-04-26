@@ -1,16 +1,18 @@
-const { withControllerUtils } = require("../../../utils/controllerUtils");
-const Profile = require("../model");
+const { withControllerUtils } = require("../../../utils");
+const { Profile } = require("../model");
 
-const createProfile = withControllerUtils((controllerUtils) => {
-  return (req, res) => {
+const handlePostProfiles = withControllerUtils((controllerUtils) => {
+  return async function handler(req, res) {
+    const newProfile = new Profile({
+      ...req.body,
+    });
     try {
-      const newProfile = new Profile();
-      newProfile.save();
+      await newProfile.save();
       controllerUtils.ok(res, newProfile);
-    } catch (error) {
-      controllerUtils.fail(res, error);
+    } catch (profileCreateError) {
+      controllerUtils.fail(res, profileCreateError);
     }
   };
 });
 
-module.exports = createProfile;
+module.exports = handlePostProfiles;

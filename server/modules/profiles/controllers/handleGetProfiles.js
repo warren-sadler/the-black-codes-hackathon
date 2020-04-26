@@ -1,4 +1,4 @@
-const Profile = require("../model");
+const { Profile } = require("../model");
 const { withControllerUtils } = require("../../../utils/controllerUtils");
 
 const handleGetProfiles = withControllerUtils((controllerUtils) => {
