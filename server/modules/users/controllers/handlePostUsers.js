@@ -7,9 +7,9 @@ const handlePostUsers = withControllerUtils((controllerUtils) => {
    * @param {import('express').Request} req
    * @param {import('express').Response} res
    */
-  async function handler(req, res) {
+  return async function handler(req, res) {
     const newUser = new User({
-      emailAddress: req.body.emailAddress,
+      ...req.body,
     });
     try {
       const createdUser = await newUser.save();
@@ -17,8 +17,7 @@ const handlePostUsers = withControllerUtils((controllerUtils) => {
     } catch (userCreateError) {
       controllerUtils.fail(res, userCreateError);
     }
-  }
-  return handler;
+  };
 });
 
 module.exports = handlePostUsers;
