@@ -1,5 +1,15 @@
 version: "3.3"
 services:
+  server:
+    build:
+      context: ./
+      dockerfile: ./docker/dev.Dockerfile
+    environment:
+      - "MONGO_URI=mongodb://database/the-black-codes"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
   database:
     image: mongo
     ports:
