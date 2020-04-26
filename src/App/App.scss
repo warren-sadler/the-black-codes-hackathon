@@ -34,3 +34,8 @@ body {
   overflow-y: scroll;
   position: relative;
 }
+
+.main-content {
+  display: flex;
+  justify-content: space-around;
+}
