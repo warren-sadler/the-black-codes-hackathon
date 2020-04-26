@@ -1,0 +1,1 @@
+exports.handleAuthenticate = require("./handleAuthenticate");

@@ -1,0 +1,54 @@
+footer {
+  color: #fff;
+
+  .footer-top {
+    background: url('/assets/images/broken_noise.png') #353535 repeat;
+    border-top: 1px solid goldenrod;
+
+    .left, .middle, .right {
+      padding: 5%;
+    }
+
+    .socialIcons {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      a {
+        margin: 10px;
+      }
+    }
+
+  }
+
+  @media(min-width: 768px) {
+    .footer-top {
+      display: flex !important;
+      flex-direction: row;
+    }
+    .left, .middle, .right {
+      width: 50%;
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #242424;
+    padding: 2%;
+
+    .copyright {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1em;
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
