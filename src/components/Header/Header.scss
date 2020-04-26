@@ -1,13 +1,26 @@
 .Header {
-  background: url('/assets/images/broken_noise.png') repeat;
+  background: url('/assets/images/broken_noise.png') #000 repeat;
+  background-size: cover;
   display: flex;
   align-items: flex-end;
-  height: 20vh;
+  height: 100%;
   padding-bottom: 0.5%;
   padding-left: 2%;
 
   h1 {
-    font-size: 4em;
+    font-size: 2em;
     text-transform: uppercase;
+  }
+}
+
+@media(min-width: 768px){
+  .Header {
+    height: 20vh;
+    padding-left: 2%;
+  
+    h1 {
+      font-size: 3.5em;
+      line-height: 1em;
+    }
   }
 }
