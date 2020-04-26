@@ -12,6 +12,6 @@ module.exports = {
   PORT: process.env.PORT || 8080,
   BEFORE_SERVER_START_FNS: [connectDB],
   NODE_ENV: process.env.NODE_ENV || "development",
-  DATABASE_URI: "mongodb://localhost/the-black-codes",
+  DATABASE_URI: process.env.MONGO_URI || "mongodb://localhost/the-black-codes",
   LOGGER: logger,
 };

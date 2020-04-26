@@ -6,8 +6,6 @@ COPY package.json .
 
 RUN ["npm", "install"]
 
-COPY server .
+COPY . .
 
-COPY scripts .
-
-CMD ["]
+CMD ["npm", "run", "server:start"]
