@@ -8,39 +8,39 @@ class Filter extends Component {
           <ul className="filter-list">Filter by
           <li className="list-item">
             <input type="checkbox" id="backenddev" name="backenddev" value="Back-End Developers"/>
-            <label for="vehicle1">Back-End Developers</label>
+            <label forhtml="vehicle1">Back-End Developers</label>
           </li>
           <li className="list-item">
             <input type="checkbox" id="frontenddev" name="frontenddev" value="Front-End Developers"/>
-            <label for="vehicle1">Front-End Developers</label>
+            <label forhtml="vehicle1">Front-End Developers</label>
           </li>
           <li className="list-item">
             <input type="checkbox" id="fullstackdev" name="fullstackdev" value="Full Stack Developers"/>
-            <label for="vehicle1">Full Stack Developers</label>
+            <label forhtml="vehicle1">Full Stack Developers</label>
           </li>
           <li className="list-item">
             <input type="checkbox" id="freelancers" name="freelance" value="Freelancers"/>
-            <label for="vehicle1">Freelancers</label>
+            <label forhtml="vehicle1">Freelancers</label>
           </li>
           <li className="list-item">
             <input type="checkbox" id="graphic" name="graphic" value="Graphic Designers"/>
-            <label for="vehicle1">Graphic Designers</label>
+            <label forhtml="vehicle1">Graphic Designers</label>
           </li>
           <li className="list-item">
             <input type="checkbox" id="product" name="product" value="Product Managers"/>
-            <label for="vehicle1">Product Managers</label>
+            <label forhtml="vehicle1">Product Managers</label>
           </li>
           <li className="list-item">
             <input type="checkbox" id="graphic" name="graphic" value="Graphic Designers"/>
-            <label for="vehicle1">Speakers</label>
+            <label forhtml="vehicle1">Speakers</label>
           </li>
           <li className="list-item">
             <input type="checkbox" id="graphic" name="graphic" value="Graphic Designers"/>
-            <label for="vehicle1">UX Design</label>
+            <label forhtml="vehicle1">UX Design</label>
           </li>
           <li className="list-item">
             <input type="checkbox" id="graphic" name="graphic" value="Graphic Designers"/>
-            <label for="vehicle1">UX Research</label>
+            <label forhtml="vehicle1">UX Research</label>
           </li>
           </ul>
         {/* <p>Filter Projects by</p>
