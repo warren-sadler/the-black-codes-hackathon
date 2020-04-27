@@ -3,10 +3,15 @@ const Profile = require("../model");
 
 const createProfile = withControllerUtils((controllerUtils) => {
   return (req, res) => {
+    
     try {
-      const newProfile = new Profile();
-      newProfile.save();
-      controllerUtils.ok(res, newProfile);
+      const newProfile = new Profile(req.body);
+      newProfile.save(err => {
+        if (err) {
+          controllerUtils.fail(res, err);
+        }
+        controllerUtils.ok(res, newProfile);
+      });
     } catch (error) {
       controllerUtils.fail(res, error);
     }
